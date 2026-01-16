@@ -13,7 +13,7 @@ export default defineConfig({
   },
 
   build: {
-    outDir: "build",
+    outDir: "dist",
     target: "esnext",
     cssCodeSplit: false, // ← forces ALL CSS into index.css
   },
