@@ -44,7 +44,7 @@ export function Navbar() {
           >
             {/* KD Logo (smaller circle) */}
             <div className="w-20 h-20 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-left shrink-0">
-              <span className="text-white font-bold text-lg md:text-xl">KD</span>
+              <span className="text-white font-bold text-lg md:text-xl">JT</span>
             </div>
 
             {/* Name + Subtitle */}

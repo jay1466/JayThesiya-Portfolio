@@ -4,14 +4,17 @@ import "./Certificates.css";
 
 const CERTS = {
   tech: [
-    { title: "Flipkart Hackathon", org: "Flipkart", date: "2022", img: "/certs/flipkart.jpg" },
-    { title: "Solution Challenge", org: "Google Developers", date: "2023", img: "/certs/hack2skill.png" },
-    { title: "ADira", org: "SCET AI Club", date: "2025", img: "/certs/adira.png" },
+    { title: "MySQL Certified", org: "Oracle", date: "2025", img: "/certs/oracle.png" },
+    { title: "Contributor", org: "GSSoC", date: "2025", img: "/certs/GSSoC.jpg" },
+    { title: "CodeFest", org: "IICPC", date: "2025", img: "/certs/IICPC.png" },
+    { title: "Java Certificate", org: "Infosys Springboard", date: "2025", img: "/certs/Infosys.png" },
   ],
   other: [
-    { title: "Codathon", org: "SCET Tech Fest", date: "2025", img: "/certs/codathon.png" },
-    { title: "Bugbuzz", org: "SCET Tech Fest", date: "2025", img: "/certs/bugbuzz.png" },
-    { title: "Dataloom", org: "SCET", date: "2024", img: "/certs/dataloom.png" },
+    { title: "Photography Competition", org: "ADIT", date: "2023", img: "/certs/Photography.png" },
+    { title: "Hackathon", org: "Smart India Hackathon", date: "2024", img: "/certs/sih-24.png" },
+    { title: "Hackathon", org: "CVM University", date: "2025", img: "/certs/cvm-25.png" },
+    { title: "Hackathon", org: "Smart India Hackathon", date: "2025", img: "/certs/sih-25.png" },
+    { title: "Hackathon", org: "Paranox 2.0 ", date: "2025", img: "/certs/Paranox.png" },
   ],
 };
 
@@ -44,7 +47,10 @@ export default function Certificates() {
           {["tech", "other"].map((t) => (
             <button
               key={t}
-              onClick={() => setTab(t)}
+              onClick={() => {
+                setTab(t);
+                setSelectedCert(null);
+              }}
               className={`cert-tab ${tab === t ? "active" : ""}`}
             >
               {t === "tech" ? "Technical" : "Other"}
@@ -56,7 +62,7 @@ export default function Certificates() {
         <div className="certs-grid">
           {CERTS[tab].map((c, i) => (
             <motion.div
-              key={c.title}
+              key={`${tab}-${i}`}
               className="cert-card"
               style={{ ["--angle"]: `${Math.random() * 8 - 4}deg` }}
               initial={{ opacity: 0, y: 40, rotate: -4 }}
