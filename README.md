@@ -2,7 +2,7 @@
 
 A modern, responsive portfolio website showcasing projects, skills, and professional journey. Built with React, TypeScript, and Tailwind CSS, featuring smooth animations and an elegant dark-themed design.
 
-**Live Demo:** [jay-thesiya.netlify.app](https://jay-thesiya.netlify.app/)
+**Live Demo:** [jay-thesiya-portfolio.vercel.app](https://jay-thesiya-portfolio.vercel.app/)
 
 ---
 
@@ -41,8 +41,8 @@ A modern, responsive portfolio website showcasing projects, skills, and professi
 
 ```bash
 # Clone the repository
-git clone https://github.com/jaythesiya/portfolio.git
-cd kunj-Portfolio2-master
+git clone https://github.com/jay1466/JayThesiya-Portfolio.git
+cd JayThesiya-Portfolio
 
 # Install dependencies
 npm install
@@ -85,9 +85,9 @@ src/
 
 ## 📧 Contact & Social
 
-- **Email:** [your.email@gmail.com](mailto:your.email@gmail.com)
-- **LinkedIn:** [linkedin.com/in/jaythesiya](https://www.linkedin.com/in/jaythesiya/)
-- **GitHub:** [github.com/jaythesiya](https://github.com/jaythesiya)
+- **Email:** [thesiyajay54@gmail.com](mailto:thesiyajay54@gmail.com)
+- **LinkedIn:** [linkedin.com/in/jay-thesiya](https://www.linkedin.com/in/jay-thesiya/)
+- **GitHub:** [github.com/jay1466](https://github.com/jay1466)
 
 ---
 
