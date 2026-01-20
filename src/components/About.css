@@ -353,6 +353,20 @@
   gap: 0.5rem;
 }
 
+/* TABLET/iPad: Remove excessive margin */
+@media (max-width: 1024px) {
+  .about-hobbies h2 {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .hobby-grid {
+    margin-left: 0;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
 .hobby {
   margin-left: 2px;
   padding: .85rem 1.4rem;

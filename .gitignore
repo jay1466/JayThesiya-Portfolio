@@ -1,1 +1,26 @@
+# Environment variables
 .env
+.env.local
+.env.*.local
+
+# Build outputs
+dist/
+build/
+
+# Dependencies
+node_modules/
+package-lock.json
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo

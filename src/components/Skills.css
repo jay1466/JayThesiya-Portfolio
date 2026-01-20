@@ -48,6 +48,49 @@
   transition: 0.35s ease;
 }
 
+/* Tablet/iPad: Switch to grid layout */
+@media (max-width: 1024px) and (min-width: 481px) {
+  .skills-stage {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.8rem;
+    height: auto;
+    padding: 0.8rem;
+    overflow: hidden;
+    align-content: start;
+  }
+  
+  .skill-circle {
+    position: static;
+    width: 75px;
+    height: 75px;
+    animation: none !important;
+    transform: none !important;
+  }
+  
+  .skill-circle img {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .skill-circle span {
+    font-size: 9px;
+  }
+}
+
+/* Mobile: Switch to grid layout */
+@media (max-width: 480px) {
+  .skills-stage {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(85px, 1fr));
+    gap: 1rem;
+    height: auto;
+    padding: 1rem;
+    overflow: hidden;
+    align-content: start;
+  }
+}
+
 /* Optional: Hover boost effect */
 .skills-stage:hover {
   box-shadow: 0 0 20px var(--accent), 0 0 20px rgba(0, 255, 255, 0.7);
@@ -69,6 +112,17 @@
   align-items: center;
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Mobile: Override absolute positioning */
+@media (max-width: 1024px) {
+  .skill-circle {
+    position: static;
+    width: 90px;
+    height: 90px;
+    animation: none !important;
+    transform: none !important;
+  }
 }
 
 .skill-circle img {
@@ -158,16 +212,27 @@
 /* Responsive */
 @media (max-width: 768px) {
   .skills-stage {
-    height: 400px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 1.5rem;
+    height: auto;
+    padding: 1.5rem;
+    overflow: visible;
+    align-content: start;
   }
+  
   .skill-circle {
-    width: 80px;
-    height: 80px;
+    position: static;
+    width: 90px;
+    height: 90px;
+    animation: none !important;
   }
+  
   .skill-circle img {
     width: 40px;
     height: 40px;
   }
+  
   .skill-circle span {
     font-size: 11px;
   }
@@ -175,8 +240,25 @@
 
 @media (max-width: 480px) {
   .skills-stage {
-    height: 350px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+    padding: 0.5rem;
   }
+  
+  .skill-circle {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .skill-circle img {
+    width: 26px;
+    height: 26px;
+  }
+  
+  .skill-circle span {
+    font-size: 7px;
+  }
+  
   .skill-box {
     padding: 1rem;
   }

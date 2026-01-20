@@ -155,6 +155,16 @@
 }
 
 /* RESPONSIVE */
+@media(max-width:1024px){
+  .contact-grid{
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .contact-title{
+    text-align:center;
+  }
+}
+
 @media(max-width:900px){
   .contact-grid{
     grid-template-columns: 1fr;
