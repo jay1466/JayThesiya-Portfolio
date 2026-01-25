@@ -20,8 +20,8 @@ export function Home({ theme }: HeroProps) {
   "IT Student",
   "Java Developer",
   "Web Developer",
-  "Database Enthusiast",
   "Problem Solver",
+  "Database Enthusiast",
 ];
 
   const connectLinks = [
