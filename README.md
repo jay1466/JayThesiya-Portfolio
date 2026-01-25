@@ -89,13 +89,6 @@ src/
 - **LinkedIn:** [linkedin.com/in/jay-thesiya](https://www.linkedin.com/in/jay-thesiya/)
 - **GitHub:** [github.com/jay1466](https://github.com/jay1466)
 
----
-
-## 📝 License
-
-This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
-
----
 
 **Built with passion for design and development.**
 

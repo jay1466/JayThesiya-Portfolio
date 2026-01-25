@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "motion/react";
 import emailjs from "emailjs-com";
 import { Mail, MapPin, Phone, Send, Github, Linkedin, Instagram, MessageCircle } from "lucide-react";
@@ -13,6 +13,11 @@ export function Contact() {
 
   const [status, setStatus] = useState("");
   const [sending, setSending] = useState(false);
+
+  // Initialize EmailJS on component mount
+  useEffect(() => {
+    emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
+  }, []);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -40,19 +45,20 @@ export function Contact() {
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
         import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         {
+          to_email: "thesiyajay54@gmail.com",
           from_name: form.name,
-          user_email: form.email,
+          from_email: form.email,
           subject: form.subject,
           message: form.message,
-        },
-        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+        }
       )
       .then(() => {
         setStatus("✅ Message sent successfully!");
         setForm({ name: "", email: "", subject: "", message: "" });
         setSending(false);
       })
-      .catch(() => {
+      .catch((error) => {
+        console.error("EmailJS Error:", error);
         setStatus("❌ Failed to send message. Please try again.");
         setSending(false);
       });
