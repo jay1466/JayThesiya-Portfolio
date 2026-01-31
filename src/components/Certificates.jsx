@@ -4,17 +4,17 @@ import "./Certificates.css";
 
 const CERTS = {
   tech: [
-    { title: "MySQL Certified", org: "Oracle", date: "2025", img: "/certs/oracle.png" },
-    { title: "Contributor", org: "GSSoC", date: "2025", img: "/certs/GSSoC.jpg" },
-    { title: "CodeFest", org: "IICPC", date: "2025", img: "/certs/IICPC.png" },
-    { title: "Java Certificate", org: "Infosys Springboard", date: "2025", img: "/certs/Infosys.png" },
+    { title: "MySQL Certified", org: "Oracle", date: "2025", img: "/certs/oracle.webp" },
+    { title: "Contributor", org: "GSSoC", date: "2025", img: "/certs/GSSoC.webp" },
+    { title: "CodeFest", org: "IICPC", date: "2025", img: "/certs/IICPC.webp" },
+    { title: "Java Certificate", org: "Infosys Springboard", date: "2025", img: "/certs/Infosys.webp" },
   ],
   other: [
-    { title: "Photography Competition", org: "ADIT", date: "2023", img: "/certs/Photography.png" },
-    { title: "Hackathon", org: "Smart India Hackathon", date: "2024", img: "/certs/sih-24.png" },
-    { title: "Hackathon", org: "CVM University", date: "2025", img: "/certs/cvm-25.png" },
-    { title: "Hackathon", org: "Smart India Hackathon", date: "2025", img: "/certs/sih-25.png" },
-    { title: "Hackathon", org: "Paranox 2.0 ", date: "2025", img: "/certs/Paranox.png" },
+    { title: "Photography Competition", org: "ADIT", date: "2023", img: "/certs/Photography.webp" },
+    { title: "Hackathon", org: "Smart India Hackathon", date: "2024", img: "/certs/sih-24.webp" },
+    { title: "Hackathon", org: "CVM University", date: "2025", img: "/certs/cvm-25.webp" },
+    { title: "Hackathon", org: "Smart India Hackathon", date: "2025", img: "/certs/sih-25.webp" },
+    { title: "Hackathon", org: "Paranox 2.0 ", date: "2025", img: "/certs/Paranox.webp" },
   ],
 };
 

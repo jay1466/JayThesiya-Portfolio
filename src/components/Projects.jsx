@@ -15,7 +15,7 @@ const PROJECTS = [
   {
     title: "📚 Research Paper Organizer",
     desc: "Web-based system for organizing, searching, and managing research papers with structured metadata and easy access for academic work.",
-    ss: "/research-paper.png",
+    ss: "/research-paper.webp",
     tech: ["Python", "MySQL", "HTML", "CSS", "JavaScript","Node.js"],
     live: "https://supriya46788.github.io/Research-Paper-Organizer/",
     code: "https://github.com/jay1466/Research-Paper-Organizer",
@@ -23,7 +23,7 @@ const PROJECTS = [
   {
     title: "📝 Quiz App",
     desc: "Interactive quiz application enabling users to attempt quizzes, track scores, and improve knowledge through a simple and engaging experience.",
-    ss: "/quiz-app.png",
+    ss: "/quiz-app.webp",
     tech: ["HTML", "CSS", "JavaScript","JSON"],
     live: "#",
     code: "https://github.com/jay1466/Quiz-App-",
@@ -31,7 +31,7 @@ const PROJECTS = [
   {
     title: "🛒 E-MART (E-Commerce Platform)",
     desc: "Full-stack e-commerce application for browsing products, managing carts, and handling orders with a modern and scalable backend.",
-    ss: "/e-mart.png",
+    ss: "/e-mart.webp",
     tech: ["Node.js", "Express.js", "MongoDB", "React"],
     live: "#",
     code: "https://github.com/jay1466/E-MART",
@@ -39,7 +39,7 @@ const PROJECTS = [
   {
     title: "🌐 Personal Portfolio Website",
     desc: "Responsive personal portfolio showcasing projects, skills, and experience, deployed on Microsoft Azure with SSL-enabled secure access.",
-    ss: "/portfolio.jpg",
+    ss: "/portfolio.webp",
     tech: ["HTML", "CSS", "JavaScript", "Azure"],
     live: "https://jaythesiya.me/",
     code: "https://github.com/jay1466/Jay-Portfolio",
