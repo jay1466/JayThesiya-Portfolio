@@ -162,7 +162,7 @@ export function About() {
             className="about-image"
             style={{ width: `${getImageWidth()}%`, transform: getImageTransform() }}
           >
-            <img src="/temp.jpg" alt="Profile" />
+            <img src="/profile.webp" alt="Profile" />
           </div>
 
           {/* INFO PANEL */}
