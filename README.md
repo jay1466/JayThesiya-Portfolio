@@ -91,4 +91,4 @@ src/
 
 
 **Built with passion for design and development.**
-
+deployed in azure

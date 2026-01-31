@@ -7,7 +7,7 @@ const PROJECTS = [
   {
     title: "🩺 Doctor–Patient Portal",
     desc: "Web-based healthcare system for managing appointments, medical records, and communication between doctors and patients through a secure dashboard.",
-    ss: "/doctor-patient.png",
+    ss: "/doctor-patient.webp",
     tech: ["Java", "JSP", "Servlets", "MySQL", "HTML", "CSS", "JavaScript"],
     live: "#",
     code: "https://github.com/jay1466/Doctor-Patient-Portal",
