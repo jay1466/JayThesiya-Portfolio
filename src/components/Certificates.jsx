@@ -8,6 +8,7 @@ const CERTS = {
     { title: "Contributor", org: "GSSoC", date: "2025", img: "/certs/GSSoC.webp" },
     { title: "CodeFest", org: "IICPC", date: "2025", img: "/certs/IICPC.webp" },
     { title: "Java Certificate", org: "Infosys Springboard", date: "2025", img: "/certs/Infosys.webp" },
+    { title: "Firebase Studio Certificate", org: "Google Developer Groups", date: "2026", img: "/certs/firebase.webp" },
   ],
   other: [
     { title: "Photography Competition", org: "ADIT", date: "2023", img: "/certs/Photography.webp" },
