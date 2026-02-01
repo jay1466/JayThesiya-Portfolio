@@ -1,7 +1,16 @@
 import { useState, useEffect } from "react";
 import { motion } from "motion/react";
 import emailjs from "emailjs-com";
-import { Mail, MapPin, Phone, Send, Github, Linkedin, Instagram, MessageCircle } from "lucide-react";
+import {
+  Mail,
+  MapPin,
+  Phone,
+  Send,
+  Github,
+  Linkedin,
+  Instagram,
+  MessageCircle,
+} from "lucide-react";
 
 export function Contact() {
   const [form, setForm] = useState({
@@ -63,8 +72,6 @@ export function Contact() {
         setSending(false);
       });
   };
-}
-
 
   const contactInfo = [
     { icon: Mail, label: "Email", value: "thesiyajay54@gmail.com" },
@@ -83,7 +90,6 @@ export function Contact() {
   return (
     <section id="contact" className="relative min-h-screen py-20">
       <div className="max-w-7xl mx-auto px-6">
-
         <motion.h2
           initial={{ x: 100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
@@ -97,7 +103,6 @@ export function Contact() {
         </motion.h2>
 
         <div className="grid lg:grid-cols-2 gap-12">
-
           {/* LEFT SIDE */}
           <motion.div
             initial={{ x: -50, opacity: 0 }}
@@ -112,10 +117,10 @@ export function Contact() {
             </h3>
 
             <p className="text-gray-600 dark:text-white/70 mb-8">
-              Whether it’s a new project or collaboration — I’d love to hear from you!
+              Whether it’s a new project or collaboration — I’d love to hear from
+              you!
             </p>
 
-            {/* CONTACT INFO */}
             <div className="space-y-6">
               {contactInfo.map((item, index) => (
                 <motion.div
@@ -124,21 +129,24 @@ export function Contact() {
                   whileInView={{ x: 0, opacity: 1 }}
                   transition={{ delay: index * 0.1 }}
                   className="flex items-center gap-4 bg-white/50 dark:bg-white/5
-                             backdrop-blur-xl border border-gray-300 dark:border-white/10
-                             rounded-xl p-4 hover:border-blue-500 dark:hover:bg-white/10 transition-all mb-8"
+                  backdrop-blur-xl border border-gray-300 dark:border-white/10
+                  rounded-xl p-4 hover:border-blue-500 dark:hover:bg-white/10 transition-all mb-8"
                 >
                   <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
                     <item.icon className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <p className="text-gray-600 dark:text-white/60 text-sm">{item.label}</p>
-                    <p className="text-gray-900 dark:text-white">{item.value}</p>
+                    <p className="text-gray-600 dark:text-white/60 text-sm">
+                      {item.label}
+                    </p>
+                    <p className="text-gray-900 dark:text-white">
+                      {item.value}
+                    </p>
                   </div>
                 </motion.div>
               ))}
             </div>
 
-            {/* SOCIAL ICONS */}
             <div className="flex flex-wrap justify-center gap-6 mb-20 w-full">
               {quickLinks.map((item, index) => (
                 <motion.a
@@ -148,24 +156,25 @@ export function Contact() {
                   rel="noreferrer"
                   whileHover={{ scale: 1.15, rotate: 5 }}
                   className="w-12 h-12 flex items-center justify-center rounded-xl
-                    bg-white/50 dark:bg-white/5 backdrop-blur-md
-                    border border-gray-300 dark:border-white/10 transition-shadow hover:shadow-lg hover:shadow-blue-500/40"
+                  bg-white/50 dark:bg-white/5 backdrop-blur-md
+                  border border-gray-300 dark:border-white/10 transition-shadow hover:shadow-lg hover:shadow-blue-500/40"
                 >
                   <item.icon className="text-blue-500 dark:text-blue-400 w-6 h-6" />
                 </motion.a>
               ))}
             </div>
-
           </motion.div>
 
-          {/* RIGHT FORM (EMAILJS) */}
+          {/* RIGHT FORM */}
           <motion.div
             initial={{ x: 50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             viewport={{ once: true }}
           >
             <form onSubmit={handleSubmit} className="space-y-6" noValidate>
-              <label className="text-gray-700 dark:text-white/80 block">Name</label>
+              <label className="text-gray-700 dark:text-white/80 block">
+                Name
+              </label>
               <input
                 name="name"
                 value={form.name}
@@ -174,7 +183,9 @@ export function Contact() {
                 placeholder="Your Name"
               />
 
-              <label className="text-gray-700 dark:text-white/80 block">Email</label>
+              <label className="text-gray-700 dark:text-white/80 block">
+                Email
+              </label>
               <input
                 name="email"
                 value={form.email}
@@ -183,7 +194,9 @@ export function Contact() {
                 placeholder="Your Email"
               />
 
-              <label className="text-gray-700 dark:text-white/80 block">Subject</label>
+              <label className="text-gray-700 dark:text-white/80 block">
+                Subject
+              </label>
               <input
                 name="subject"
                 value={form.subject}
@@ -192,7 +205,9 @@ export function Contact() {
                 placeholder="Project Discussion"
               />
 
-              <label className="text-gray-700 dark:text-white/80 block">Message</label>
+              <label className="text-gray-700 dark:text-white/80 block">
+                Message
+              </label>
               <textarea
                 name="message"
                 rows={5}
@@ -220,4 +235,4 @@ export function Contact() {
       </div>
     </section>
   );
-
+}
