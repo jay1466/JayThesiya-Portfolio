@@ -16,7 +16,7 @@ export function Contact() {
 
   // Initialize EmailJS on component mount
   useEffect(() => {
-    emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
+    emailjs.init("AfP6Qdzg7VDFpN-8h");
   }, []);
 
   const handleChange = (
@@ -42,8 +42,8 @@ export function Contact() {
 
     emailjs
       .send(
-        import.meta.env.VITE_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        "service_v8o1v3w",
+        "template_759k908",
         {
           to_email: "thesiyajay54@gmail.com",
           from_name: form.name,
@@ -63,6 +63,8 @@ export function Contact() {
         setSending(false);
       });
   };
+}
+
 
   const contactInfo = [
     { icon: Mail, label: "Email", value: "thesiyajay54@gmail.com" },
