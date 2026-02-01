@@ -145,7 +145,7 @@ export function Home({ theme }: HeroProps) {
             </div>
           </div>
 
-          <div className="social-group">
+          <div className="social-group" style={{ width: "100%" }}>
             <h5>Support & Coding</h5>
             <div className="social-icons">
               <motion.a
@@ -159,10 +159,10 @@ export function Home({ theme }: HeroProps) {
                 <img
                   src="/codolio.svg"
                   alt="Codolio"
-                  width={30}
-                  height={30}
+                  width={50}
+                  height={50}
                 />
-                <div className="flex text-lg">
+                <div className="flex text-1xl">
                   <span className="font-extrabold text-black dark:text-white">Cod</span>
                   <span className="font-extrabold" style={{ color: "#f97316" }}>olio</span>
                 </div>
