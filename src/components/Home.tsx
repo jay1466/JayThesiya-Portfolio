@@ -144,6 +144,40 @@ export function Home({ theme }: HeroProps) {
               ))}
             </div>
           </div>
+
+          <div className="social-group">
+            <h5>Support & Coding</h5>
+            <div className="social-icons">
+              <motion.a
+                href="https://codolio.com/profile/jay1466"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.05 }}
+                variants={itemVariants}
+                className="flex items-center gap-2 py-2 px-4 bg-white/90 dark:bg-black/90 backdrop-blur-sm rounded-xl shadow-sm"
+              >
+                <img
+                  src="/codolio.svg"
+                  alt="Codolio"
+                  width={30}
+                  height={30}
+                />
+                <div className="flex text-lg">
+                  <span className="font-extrabold text-black dark:text-white">Cod</span>
+                  <span className="font-extrabold" style={{ color: "#f97316" }}>olio</span>
+                </div>
+              </motion.a>
+              <motion.a
+                href="https://www.buymeacoffee.com/jay1466"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.05 }}
+                variants={itemVariants}
+              >
+                <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style={{ height: "60px", width: "217px" }} />
+              </motion.a>
+            </div>
+          </div>
         </motion.div>
 
         <motion.div
