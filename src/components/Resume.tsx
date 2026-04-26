@@ -87,8 +87,8 @@ export function Resume() {
             transition={{ delay: 0.35, duration: 0.7 }}
             className="profile-summary"
           >
-            Motivated Java and Web Developer with hands-on experience in frontend and backend development. 
-            Skilled in Java and modern web technologies, 
+            Motivated Java and Web Developer with hands-on experience in frontend and backend development.
+            Skilled in Java and modern web technologies,
             with a strong focus on building practical and scalable applications.
           </motion.p>
         </motion.div>
@@ -183,10 +183,10 @@ export function Resume() {
 
           <ul className="project-list">
             {[
-                "- Online Library Management System (Java + MySQL)",
-                "- Event Ticket Booking Web Application",
-                "- Student Attendance Management System",
-                "- Portfolio Website using React — in progress"
+              "- Online Library Management System (Java + MySQL)",
+              "- Event Ticket Booking Web Application",
+              "- Student Attendance Management System",
+              "- Portfolio Website using React — in progress"
             ].map((project, i) => (
               <motion.li
                 key={i}
@@ -224,9 +224,9 @@ export function Resume() {
 
           <div className="skill-tags">
             {[
-              "Java","Python","C++","C","HTML","CSS","JavaScript",
-              "React","MySQL","MongoDB","Git","Spring","Spring Boot",
-              "TypeScript","Angular","OOP","Creativity","Teamwork"
+              "Java", "Python", "C++", "C", "HTML", "CSS", "JavaScript",
+              "React", "MySQL", "MongoDB", "Git", "Spring", "Spring Boot",
+              "TypeScript", "Angular", "OOP", "Creativity", "Teamwork"
             ].map((skill, i) => (
               <motion.span
                 key={skill}
