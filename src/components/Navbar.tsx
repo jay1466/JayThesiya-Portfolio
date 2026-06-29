@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useScroll, useMotionValueEvent, useTransform } from "framer-motion";
 import { Menu, X, Sun, Moon } from "lucide-react";
 
 interface NavbarProps {
@@ -7,25 +7,22 @@ interface NavbarProps {
   setTheme: (theme: "light" | "dark") => void;
 }
 
-const NAV_ITEMS = ["Home", "About", "Projects", "Skills", "Resume", "Contact"];
+const NAV_ITEMS = ["Home", "About", "Experience", "Projects", "Skills", "Resume", "Contact"];
 
 export function Navbar({ theme, setTheme }: NavbarProps) {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [scrollProgress, setScrollProgress] = useState(0);
   const [activeSection, setActiveSection] = useState("home");
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
+  const { scrollY, scrollYProgress } = useScroll();
+  const progressWidth = useTransform(scrollYProgress, (val) => `${val * 100}%`);
 
-      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-      setScrollProgress(docHeight > 0 ? Math.min(window.scrollY / docHeight, 1) : 0);
-    };
-    handleScroll();
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    const isScrolled = latest > 50;
+    if (scrolled !== isScrolled) {
+      setScrolled(isScrolled);
+    }
+  });
 
   // Active-section tracking via IntersectionObserver — robust, no
   // manual scroll-math, and correctly handles short/tall sections alike.
@@ -182,8 +179,7 @@ export function Navbar({ theme, setTheme }: NavbarProps) {
         <div className="h-[2px] w-full bg-transparent">
           <motion.div
             className="h-full bg-gradient-to-r from-indigo-500 via-purple-500 to-cyan-400"
-            style={{ width: `${scrollProgress * 100}%` }}
-            transition={{ ease: "linear" }}
+            style={{ width: progressWidth }}
           />
         </div>
       </motion.nav>

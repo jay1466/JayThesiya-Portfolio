@@ -10,11 +10,14 @@ const COUNTERS = [
   { icon: Trophy, label: "LeetCode Solved", value: 100 },
 ];
 
+
 const HOBBIES = [
+  { emoji: "🏏", label: "Playing Cricket" },
+  { emoji: "✈️", label: "Traveling" },
   { emoji: "🎧", label: "Listening to Music" },
-  { emoji: "📷", label: "Photography" },
+  { emoji: "💻", label: "Exploring New Technologies" },
+  { emoji: "📸", label: "Photography" },
   { emoji: "🎮", label: "Gaming" },
-  { emoji: "🏀", label: "Sports & Fitness" },
 ];
 
 const fadeUp = {
@@ -107,27 +110,15 @@ export function About() {
             </motion.h3>
 
             <motion.p variants={fadeUp}>
-              I'm Jay Thesiya, an IT student passionate about building practical,
-              real-world technology solutions. I enjoy developing software
-              applications and exploring how technology can simplify everyday
-              problems. I'm eager to learn, grow, and contribute in a
-              collaborative and challenging environment.
+              I'm Jay Thesiya, a passionate Java Backend Developer and Information Technology student with a strong interest in building secure, scalable, and real-world software solutions. I enjoy developing backend applications using Java and Spring Boot while continuously learning modern technologies to solve practical problems.
             </motion.p>
 
             <motion.p variants={fadeUp}>
-              Beyond coding, I enjoy understanding system design, improving user
-              experiences, and working with databases. I like blending clean
-              logic with thoughtful design to create applications that are both
-              efficient and user-friendly. My goal is to build solutions that
-              are reliable, scalable, and impactful.
+              My experience includes building RESTful APIs, implementing authentication with Spring Security, working with relational and NoSQL databases, and deploying applications using Docker and AWS. I believe in writing clean, maintainable code and creating applications that are reliable, efficient, and user-focused.
             </motion.p>
 
             <motion.p variants={fadeUp}>
-              Currently pursuing a Bachelor's degree in Information Technology,
-              with hands-on experience in Java, web development, and
-              database-driven projects. Familiar with MySQL, OOP concepts, and
-              project-based learning. Actively seeking internship opportunities
-              to apply my skills and gain industry exposure.
+              Currently pursuing a Bachelor's degree in Information Technology, I have completed multiple internships and developed projects such as OneStopBank and SecureAI Sentinel. I am actively seeking Software Engineer and Java Backend Developer opportunities where I can contribute, learn from experienced professionals, and grow as a developer.
             </motion.p>
           </motion.div>
         </div>

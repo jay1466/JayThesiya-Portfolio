@@ -12,11 +12,14 @@ interface Cert {
 
 const CERTS: Record<"tech" | "other", Cert[]> = {
   tech: [
+
     { title: "MySQL Certified", org: "Oracle", date: "2025", img: "/certs/oracle.webp" },
     { title: "Contributor", org: "GSSoC", date: "2025", img: "/certs/GSSoC.webp" },
     { title: "CodeFest", org: "IICPC", date: "2025", img: "/certs/IICPC.webp" },
     { title: "Java Certificate", org: "Infosys Springboard", date: "2025", img: "/certs/Infosys.webp" },
     { title: "Firebase Studio Certificate", org: "Google Developer Groups", date: "2026", img: "/certs/firebase.webp" },
+    { title: "Java Spring Boot, React & Gen AI", org: "Telusko", date: "2026", img: "/certs/telusko.webp" },
+    { title: "Maven for Absolute Beginners", org: "Udemy", date: "2026", img: "/certs/maven.webp" },
   ],
   other: [
     { title: "Photography Competition", org: "ADIT", date: "2023", img: "/certs/Photography.webp" },

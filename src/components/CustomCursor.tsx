@@ -44,7 +44,10 @@ export function CustomCursor() {
       rafId.current = requestAnimationFrame(() => {
         x.set(e.clientX);
         y.set(e.clientY);
-        if (!visible) setVisible(true);
+        setVisible((v) => {
+          if (!v) return true;
+          return v;
+        });
       });
     };
 

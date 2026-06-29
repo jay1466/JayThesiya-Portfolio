@@ -1,264 +1,183 @@
-/* ====================================================================
-   DEVELOPER AVATAR — holographic service-map scene
-   ==================================================================== */
+/* =====================================================================
+   TECH NEXUS — world-class 3D crystalline centerpiece
+   ===================================================================== */
 
-.avatar-stage-outer {
+/* ── outer wrapper ── */
+.tnx-outer {
   position: relative;
   width: 100%;
-  max-width: 460px;
+  max-width: 500px;
   aspect-ratio: 1 / 1;
   margin: 0 auto;
+  contain: layout style;
 }
 
-/* ---------- ambient glow behind the whole scene ---------- */
-.avatar-glow-field {
+/* ── volumetric glow layers ── */
+.tnx-vol-glow {
   position: absolute;
-  inset: -15%;
+  inset: -20%;
   pointer-events: none;
+  z-index: 0;
 }
 
-.avatar-glow-field .glow {
+.vg {
   position: absolute;
   border-radius: 50%;
-  filter: blur(60px);
 }
 
-.glow-violet {
-  width: 60%;
-  height: 60%;
-  top: 8%;
-  left: 12%;
-  background: rgba(139, 92, 246, 0.45);
-  animation: avatarGlowDrift 7s ease-in-out infinite;
+.vg-1 {
+  width: 70%;
+  height: 70%;
+  top: 5%;
+  left: 10%;
+  background: radial-gradient(ellipse, rgba(139, 92, 246, 0.38) 0%, transparent 70%);
+  filter: blur(45px);
+  animation: tnxGlowA 8s ease-in-out infinite;
+}
+.vg-2 {
+  width: 55%;
+  height: 55%;
+  bottom: 4%;
+  right: 8%;
+  background: radial-gradient(ellipse, rgba(99, 102, 241, 0.32) 0%, transparent 70%);
+  filter: blur(50px);
+  animation: tnxGlowA 11s ease-in-out infinite reverse;
+}
+.vg-3 {
+  width: 38%;
+  height: 38%;
+  top: 40%;
+  left: 32%;
+  background: radial-gradient(ellipse, rgba(34, 211, 238, 0.28) 0%, transparent 70%);
+  filter: blur(35px);
+  animation: tnxGlowB 7s ease-in-out infinite;
+}
+.vg-4 {
+  width: 25%;
+  height: 25%;
+  top: 10%;
+  right: 18%;
+  background: radial-gradient(ellipse, rgba(167, 139, 250, 0.22) 0%, transparent 70%);
+  filter: blur(28px);
+  animation: tnxGlowB 9s ease-in-out infinite reverse;
 }
 
-.glow-indigo {
-  width: 46%;
-  height: 46%;
-  bottom: 6%;
-  right: 6%;
-  background: rgba(99, 102, 241, 0.4);
-  animation: avatarGlowDrift 9s ease-in-out infinite reverse;
+@keyframes tnxGlowA {
+  0%, 100% { transform: scale(1) translate(0, 0); opacity: 0.8; }
+  50% { transform: scale(1.18) translate(3%, -4%); opacity: 1; }
+}
+@keyframes tnxGlowB {
+  0%, 100% { transform: scale(1) translate(0, 0); opacity: 0.7; }
+  50% { transform: scale(1.12) translate(-3%, 5%); opacity: 1; }
 }
 
-.glow-cyan {
-  width: 30%;
-  height: 30%;
-  bottom: 18%;
-  left: 30%;
-  background: rgba(34, 211, 238, 0.3);
-  animation: avatarGlowDrift 8s ease-in-out infinite;
+/* ── stage ── */
+.tnx-stage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
 }
 
-@keyframes avatarGlowDrift {
-  0%, 100% { transform: scale(1) translate(0, 0); opacity: 0.85; }
-  50% { transform: scale(1.15) translate(2%, -3%); opacity: 1; }
-}
-
-/* ---------- stage ---------- */
-.avatar-stage {
+.tnx-scene {
   position: relative;
   width: 100%;
   height: 100%;
 }
 
-.avatar-3d {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-/* ---------- data-flow lines ---------- */
-.data-flow-svg {
+/* ── SVG canvas ── */
+.tnx-svg {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   overflow: visible;
+  /* Floating motion */
+  animation: tnxFloat 6s ease-in-out infinite;
+  will-change: transform;
 }
 
-.flow-path {
-  stroke: rgba(167, 139, 250, 0.28);
-  stroke-width: 1.2;
-  stroke-dasharray: 2 6;
+@keyframes tnxFloat {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-14px); }
 }
 
-/* ---------- central core ---------- */
-.avatar-core {
+/* ── code chips ── */
+.tnx-code-chip {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 30%;
-  height: 30%;
-  transform: translate(-50%, -50%);
-}
-
-.avatar-core-ring {
-  position: absolute;
-  inset: -22%;
-  border-radius: 50%;
-  border: 1px dashed rgba(167, 139, 250, 0.35);
-  animation: coreSpin 24s linear infinite;
-}
-
-.avatar-core-ring::before {
-  content: "";
-  position: absolute;
-  inset: -14%;
-  border-radius: 50%;
-  border: 1px solid rgba(34, 211, 238, 0.18);
-}
-
-@keyframes coreSpin {
-  to { transform: rotate(360deg); }
-}
-
-.avatar-core-glass {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  border-radius: 28%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  background: linear-gradient(145deg, rgba(139, 92, 246, 0.28), rgba(99, 102, 241, 0.14));
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(14px);
-  box-shadow:
-    0 0 50px rgba(139, 92, 246, 0.55),
-    inset 0 1px 0 rgba(255, 255, 255, 0.3);
-}
-
-.avatar-core-icon {
-  color: #f3f0ff;
-  filter: drop-shadow(0 0 10px rgba(196, 181, 253, 0.8));
-}
-
-.avatar-core-lines {
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
-  width: 46%;
-}
-
-.avatar-core-lines span {
-  height: 2px;
-  border-radius: 2px;
-  background: rgba(255, 255, 255, 0.55);
-}
-
-.avatar-core-lines span:nth-child(1) { width: 100%; }
-.avatar-core-lines span:nth-child(2) { width: 70%; }
-.avatar-core-lines span:nth-child(3) { width: 85%; }
-
-.avatar-core-disc {
-  position: absolute;
-  left: 50%;
-  bottom: -14%;
-  width: 130%;
-  height: 22%;
-  transform: translateX(-50%);
-  border-radius: 50%;
-  background: radial-gradient(ellipse, rgba(139, 92, 246, 0.45), transparent 70%);
-  filter: blur(6px);
-  z-index: -1;
-}
-
-/* ---------- orbiting nodes ---------- */
-.avatar-node {
-  position: absolute;
-  transform: translate(-50%, -50%);
-  border-radius: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #e9e3ff;
-  cursor: default;
-}
-
-.glass-chip {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 8px 22px rgba(99, 102, 241, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.18);
-  transition: box-shadow 0.25s ease, border-color 0.25s ease;
-}
-
-.avatar-node:hover {
-  border-color: rgba(196, 181, 253, 0.7);
-  box-shadow: 0 8px 28px rgba(139, 92, 246, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.25);
-}
-
-/* ---------- floating code chips ---------- */
-.code-float-layer {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-}
-
-.code-chip {
-  position: absolute;
-  font-family: "JetBrains Mono", ui-monospace, monospace;
-  font-size: 0.7rem;
-  color: #c4b5fd;
-  background: rgba(139, 92, 246, 0.1);
-  border: 1px solid rgba(167, 139, 250, 0.28);
-  border-radius: 8px;
-  padding: 5px 10px;
+  font-family: "JetBrains Mono", "Fira Code", ui-monospace, monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.02em;
+  color: rgba(196, 181, 253, 0.85);
+  background: rgba(15, 10, 30, 0.7);
+  border: 1px solid rgba(139, 92, 246, 0.35);
+  border-radius: 6px;
+  padding: 4px 9px;
   white-space: nowrap;
-  backdrop-filter: blur(6px);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow:
+    0 0 12px rgba(139, 92, 246, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  pointer-events: none;
+  z-index: 10;
 }
 
-/* ---------- LIGHT THEME adjustments ---------- */
-[data-avatar-theme="light"] .avatar-core-glass {
-  background: linear-gradient(145deg, rgba(139, 92, 246, 0.18), rgba(99, 102, 241, 0.08));
-  border-color: rgba(99, 102, 241, 0.3);
+/* ── light theme ── */
+[data-theme="light"] .tnx-code-chip {
+  color: rgba(91, 33, 182, 0.9);
+  background: rgba(245, 243, 255, 0.85);
+  border-color: rgba(124, 58, 237, 0.3);
+}
+[data-theme="light"] .vg-1 {
+  background: radial-gradient(ellipse, rgba(139, 92, 246, 0.22) 0%, transparent 70%);
+}
+[data-theme="light"] .vg-3 {
+  background: radial-gradient(ellipse, rgba(34, 211, 238, 0.18) 0%, transparent 70%);
 }
 
-[data-avatar-theme="light"] .glass-chip {
-  background: rgba(255, 255, 255, 0.55);
-  border-color: rgba(99, 102, 241, 0.25);
-  color: #4c1d95;
-}
-
-[data-avatar-theme="light"] .code-chip {
-  color: #5b21b6;
-  background: rgba(139, 92, 246, 0.07);
-  border-color: rgba(124, 58, 237, 0.2);
-}
-
-/* ---------- reduced motion ---------- */
+/* ── reduced motion ── */
 @media (prefers-reduced-motion: reduce) {
-  .avatar-core-ring,
-  .glow-violet,
-  .glow-indigo,
-  .glow-cyan {
+  .tnx-svg,
+  .vg-1, .vg-2, .vg-3, .vg-4 {
     animation: none !important;
   }
 }
 
-/* ---------- responsive ---------- */
-@media (max-width: 992px) {
-  .avatar-stage-outer {
-    max-width: 380px;
+/* ── responsive ── */
+@media (max-width: 1024px) {
+  .tnx-outer {
+    max-width: 420px;
   }
 }
-
+@media (max-width: 768px) {
+  .tnx-outer {
+    max-width: 360px;
+  }
+  .tnx-code-chip {
+    font-size: 0.6rem;
+    padding: 3px 7px;
+  }
+}
 @media (max-width: 600px) {
-  .avatar-stage-outer {
+  .tnx-outer {
     max-width: 300px;
   }
-
-  .code-chip {
-    font-size: 0.62rem;
-    padding: 4px 8px;
+  .tnx-code-chip {
+    display: none;
+  }
+}
+@media (max-width: 380px) {
+  .tnx-outer {
+    max-width: 250px;
   }
 }
 
-@media (max-width: 380px) {
-  .avatar-stage-outer {
-    max-width: 250px;
+/* Mobile: move below content and center */
+@media (max-width: 600px) {
+  .hero-avatar-col {
+    order: 2 !important;
+    width: 90% !important;
+    margin: 0 auto;
   }
 }

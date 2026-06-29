@@ -14,6 +14,30 @@ interface Project {
 
 const PROJECTS: Project[] = [
   {
+    title: "🏦 OneStopBank - Premium Banking Portal",
+    desc: "Secure and premium banking portal for seamless transactions, account management, and financial tracking.",
+    ss: "/banking-portal.png",
+    tech: ["Java", "Spring Boot", "React", "MySQL"],
+    live: "#",
+    code: "https://github.com/jay1466/BankingPortal.git",
+  },
+  {
+    title: "📄 AI Resume Analyser",
+    desc: "Intelligent resume parsing and analysis tool leveraging AI to extract skills, evaluate scores, and recommend improvements.",
+    ss: "/resume-analyser.png",
+    tech: ["Python", "Machine Learning", "React", "Node.js"],
+    live: "https://resume-analyser-ze0e.onrender.com/",
+    code: "https://github.com/jay1466/Ai-Resume-Analyser.git",
+  },
+  {
+    title: "🧾 Invoice System",
+    desc: "Comprehensive invoicing solution to create, track, and manage client bills with a dynamic and user-friendly interface.",
+    ss: "/invoice-system.png",
+    tech: ["React", "Node.js", "Express", "MongoDB"],
+    live: "https://invoice-system-alpha-jet.vercel.app",
+    code: "https://github.com/jay1466/invoice-system.git",
+  },
+  {
     title: "🩺 Doctor–Patient Portal",
     desc: "Web-based healthcare system for managing appointments, medical records, and communication between doctors and patients through a secure dashboard.",
     ss: "/doctor-patient.webp",

@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import "./AmbientBackground.css";
 
 interface AmbientBackgroundProps {
@@ -21,6 +22,8 @@ export function AmbientBackground({ theme }: AmbientBackgroundProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const parallaxRef = useRef<HTMLDivElement>(null);
   const [reducedMotion, setReducedMotion] = useState(false);
+  const { scrollY } = useScroll();
+  const parallaxY = useTransform(scrollY, (y) => (reducedMotion ? 0 : y * 0.06));
 
   // Respect prefers-reduced-motion: skip canvas particles + parallax entirely.
   useEffect(() => {
@@ -30,27 +33,6 @@ export function AmbientBackground({ theme }: AmbientBackgroundProps) {
     mq.addEventListener("change", onChange);
     return () => mq.removeEventListener("change", onChange);
   }, []);
-
-  // Layer 5 — parallax: translate the grid/blob layer a fraction of scroll distance.
-  useEffect(() => {
-    if (reducedMotion) return;
-    let raf: number | null = null;
-    const onScroll = () => {
-      if (raf) return;
-      raf = requestAnimationFrame(() => {
-        const y = window.scrollY * 0.06;
-        if (parallaxRef.current) {
-          parallaxRef.current.style.transform = `translate3d(0, ${y}px, 0)`;
-        }
-        raf = null;
-      });
-    };
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => {
-      window.removeEventListener("scroll", onScroll);
-      if (raf) cancelAnimationFrame(raf);
-    };
-  }, [reducedMotion]);
 
   // Layer 3 — particles on canvas. Lightweight: capped count, low-DPI cap,
   // pauses when tab is hidden, skipped entirely under reduced-motion.
@@ -126,7 +108,7 @@ export function AmbientBackground({ theme }: AmbientBackgroundProps) {
   return (
     <div className="ambient-bg" data-theme={theme} aria-hidden="true">
       {/* Layer 5 wrapper: grid + blobs move together on parallax */}
-      <div ref={parallaxRef} className="ambient-parallax">
+      <motion.div className="ambient-parallax" style={{ y: parallaxY }}>
         {/* Layer 1 — animated grid */}
         <div className="ambient-grid" />
 
@@ -134,7 +116,7 @@ export function AmbientBackground({ theme }: AmbientBackgroundProps) {
         <div className="ambient-blob ambient-blob-a" />
         <div className="ambient-blob ambient-blob-b" />
         <div className="ambient-blob ambient-blob-c" />
-      </div>
+      </motion.div>
 
       {/* Layer 3 — particles (skipped under reduced motion) */}
       {!reducedMotion && <canvas ref={canvasRef} className="ambient-particles" />}

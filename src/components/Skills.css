@@ -34,67 +34,116 @@
   color: var(--text-muted);
 }
 
-/* ---------- tech badge cloud — deterministic flex-wrap, no random layout ---------- */
+/* ---------- floating skill cloud ---------- */
 .skills-stage {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.1rem;
+  position: relative;
+  width: 100%;
   max-width: 980px;
   margin: 0 auto 4rem;
-  padding: 2.2rem 1.5rem;
+  height: 550px;
   border-radius: 28px;
-  border: 1px solid var(--skills-stage-border);
+  overflow: hidden;
+
+  /* 🔥 Neon Highlighted Border */
+  border: 2px solid var(--skill-glow, rgba(139, 92, 246, 0.5));
+  box-shadow: 0 0 8px var(--skill-glow, rgba(139, 92, 246, 0.5)), 0 0 8px rgba(0, 255, 255, 0.2);
+  transition: 0.35s ease;
   background: var(--skills-stage-bg);
-  box-shadow: 0 0 0 1px rgba(139, 92, 246, 0.06), 0 30px 60px -30px rgba(99, 102, 241, 0.35);
-  transition: box-shadow 0.35s ease;
 }
 
+/* Tablet/iPad: Switch to grid layout */
+@media (max-width: 1024px) and (min-width: 481px) {
+  .skills-stage {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.8rem;
+    height: auto;
+    padding: 0.8rem;
+    overflow: hidden;
+    align-content: start;
+  }
+  
+  .skill-circle {
+    position: static;
+    width: 75px;
+    height: 75px;
+    animation: none !important;
+    transform: none !important;
+  }
+  
+  .skill-circle img {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .skill-circle span {
+    font-size: 9px;
+  }
+}
+
+/* Mobile: Switch to grid layout */
+@media (max-width: 480px) {
+  .skills-stage {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(85px, 1fr));
+    gap: 1rem;
+    height: auto;
+    padding: 1rem;
+    overflow: hidden;
+    align-content: start;
+  }
+}
+
+/* Optional: Hover boost effect */
 .skills-stage:hover {
-  box-shadow: 0 0 0 1px rgba(139, 92, 246, 0.14), 0 30px 70px -25px rgba(139, 92, 246, 0.45);
+  box-shadow: 0 0 20px var(--skill-glow, rgba(139, 92, 246, 0.8)), 0 0 20px rgba(0, 255, 255, 0.4);
 }
 
-.skill-badge {
-  width: 96px;
+/* Skill Circles */
+.skill-circle {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: var(--badge-bg); /* subtle transparent bg */
+  border: 1px solid var(--badge-border); /* subtle border */
+  backdrop-filter: blur(6px);
+  position: absolute;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  padding: 14px 8px;
-  border-radius: 18px;
-  cursor: pointer;
-  background: var(--badge-bg);
-  border: 1px solid var(--badge-border);
-  backdrop-filter: blur(6px);
-  transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.2s ease;
-}
-
-.skill-badge:hover {
-  border-color: var(--badge-color, #8b5cf6);
-  box-shadow: 0 10px 26px -10px var(--badge-color, rgba(139, 92, 246, 0.5));
-}
-
-.skill-badge-glyph {
-  width: 46px;
-  height: 46px;
-  border-radius: 13px;
-  display: flex;
-  align-items: center;
   justify-content: center;
-  font-family: "Space Grotesk", ui-sans-serif, sans-serif;
-  font-weight: 700;
-  font-size: 0.85rem;
-  color: #0a0a0a;
-  background: var(--badge-color, #8b5cf6);
-  box-shadow: 0 6px 16px -4px var(--badge-color, rgba(139, 92, 246, 0.5));
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.skill-name {
-  font-size: 0.74rem;
+/* Mobile: Override absolute positioning */
+@media (max-width: 1024px) {
+  .skill-circle {
+    position: static;
+    width: 90px;
+    height: 90px;
+    animation: none !important;
+    transform: none !important;
+  }
+}
+
+.skill-circle img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  margin-bottom: 5px;
+}
+
+.skill-circle:hover {
+  transform: scale(1.3);
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.skill-circle span {
+  font-size: 13px;
   font-weight: 500;
   text-align: center;
   color: var(--text);
-  opacity: 0.85;
 }
 
 /* ---------- proficiency table ---------- */
@@ -219,52 +268,9 @@
 /* ====================================================================
    RESPONSIVE
    ==================================================================== */
-@media (max-width: 768px) {
-  .skills-stage {
-    gap: 0.8rem;
-    padding: 1.6rem 1rem;
-  }
-
-  .skill-badge {
-    width: 78px;
-    padding: 10px 6px;
-  }
-
-  .skill-badge-glyph {
-    width: 38px;
-    height: 38px;
-    font-size: 0.72rem;
-  }
-
-  .skill-name {
-    font-size: 0.66rem;
-  }
-}
-
 @media (max-width: 480px) {
   .skills-container {
     margin: 0 4%;
-  }
-
-  .skills-stage {
-    gap: 0.6rem;
-    padding: 1.2rem 0.8rem;
-    border-radius: 22px;
-  }
-
-  .skill-badge {
-    width: 66px;
-    padding: 8px 4px;
-  }
-
-  .skill-badge-glyph {
-    width: 32px;
-    height: 32px;
-    font-size: 0.64rem;
-  }
-
-  .skill-name {
-    font-size: 0.58rem;
   }
 
   .skill-box {

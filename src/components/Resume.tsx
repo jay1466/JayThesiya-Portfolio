@@ -87,9 +87,9 @@ export function Resume() {
             transition={{ delay: 0.35, duration: 0.7 }}
             className="profile-summary"
           >
-            Motivated Java and Web Developer with hands-on experience in frontend and backend development.
-            Skilled in Java and modern web technologies,
-            with a strong focus on building practical and scalable applications.
+            Passionate Java Backend Developer with hands-on experience in Spring Boot, REST APIs, and database-driven applications.
+            Skilled in Java, Spring ecosystem, SQL, and modern development tools,
+            with a strong focus on building secure, scalable, and high-performance applications.
           </motion.p>
         </motion.div>
 
@@ -128,7 +128,7 @@ export function Resume() {
                 degree: "B.Tech in Information Technology",
                 school: "A D Patel Institute of Technology, Anand",
                 period: "2023 – 2027",
-                detail: "Current GPA: 8.54",
+                detail: "Current GPA: 8.95 (Till Semester 6th)",
               },
               {
                 degree: "Higher Secondary (12th)",
@@ -183,10 +183,10 @@ export function Resume() {
 
           <ul className="project-list">
             {[
-              "- Online Library Management System (Java + MySQL)",
-              "- Event Ticket Booking Web Application",
-              "- Student Attendance Management System",
-              "- Portfolio Website using React — in progress"
+              "- OneStopBank – Digital Banking Portal (Spring Boot, Spring Security, MySQL, Docker)",
+              "- SecureAI Sentinel – AI-Powered Repository Security Platform (Spring Boot, PostgreSQL, Ollama)",
+              "- Quiz App – Interactive Web-Based Quiz Platform (HTML, CSS, JavaScript, JSON)",
+              "- Jewellery Showcase Website – Full Stack Web Application (Freelance Project)"
             ].map((project, i) => (
               <motion.li
                 key={i}
@@ -224,9 +224,18 @@ export function Resume() {
 
           <div className="skill-tags">
             {[
-              "Java", "Python", "C++", "C", "HTML", "CSS", "JavaScript",
-              "React", "MySQL", "MongoDB", "Git", "Spring", "Spring Boot",
-              "TypeScript", "Angular", "OOP", "Creativity", "Teamwork"
+              "Java",
+              "Spring Boot",
+              "REST APIs",
+              "MySQL",
+              "PostgreSQL",
+              "Docker",
+              "AWS",
+              "Git",
+              "Spring Security",
+              "Hibernate",
+              "Maven",
+              "OOP"
             ].map((skill, i) => (
               <motion.span
                 key={skill}

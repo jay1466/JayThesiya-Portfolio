@@ -8,39 +8,23 @@ interface SkillRow {
 }
 
 const SKILLS = [
-
-  { name: "Java", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" },
-
-  { name: "Spring", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" },
-
-  { name: "Spring Boot", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" },
-
-  { name: "Hibernate", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/hibernate/hibernate-original.svg" },
-
-  { name: "MySQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
-
-  { name: "PostgreSQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" },
-
-  { name: "MongoDB", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
-
-  { name: "Docker", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
-
-  { name: "AWS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" },
-
-  { name: "Git", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
-
-  { name: "GitHub", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" },
-
   { name: "HTML", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
-
   { name: "CSS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
-
   { name: "JavaScript", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
-
+  { name: "React", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+  { name: "Angular", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" },
   { name: "C", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" },
-
   { name: "C++", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" },
-
+  { name: "Java", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" },
+  { name: "Python", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
+  { name: "Spring", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" },
+  { name: "Spring Boot", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" },
+  { name: "MySQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
+  { name: "PostgreSQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" },
+  { name: "MongoDB", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
+  { name: "Git", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
+  { name: "GitHub", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" },
+  { name: "OpenCV", logo: "https://upload.wikimedia.org/wikipedia/commons/3/32/OpenCV_Logo_with_text_svg_version.svg" },
 ];
 
 const ROWS: SkillRow[][] = [
@@ -49,40 +33,34 @@ const ROWS: SkillRow[][] = [
       title: "Programming Languages",
       items: [
         { name: "Java", level: 95 },
-        { name: "SQL", level: 90 },
-        { name: "JavaScript", level: 70 },
-        { name: "C", level: 50 },
-        { name: "C++", level: 60 },
+        { name: "C", level: 80 },
+        { name: "C++", level: 85 },
+        { name: "Python", level: 70 },
       ],
     },
     {
-      title: "Backend Technologies",
+      title: "Web Technologies",
       items: [
-        { name: "Spring Boot", level: 90 },
-        { name: "Spring Security", level: 85 },
-        { name: "Spring Data JPA", level: 85 },
-        { name: "Hibernate", level: 80 },
-        { name: "REST APIs", level: 90 },
+        { name: "HTML", level: 95 },
+        { name: "CSS", level: 90 },
+        { name: "JavaScript", level: 85 },
+        { name: "React", level: 80 },
       ],
     },
     {
-      title: "Databases & Cloud",
+      title: "Databases & Tools",
       items: [
-        { name: "MySQL", level: 90 },
-        { name: "PostgreSQL", level: 80 },
+        { name: "MySQL", level: 80 },
         { name: "MongoDB", level: 75 },
-        { name: "AWS", level: 75 },
-        { name: "Docker", level: 80 },
+        { name: "Git", level: 85 },
       ],
     },
     {
-      title: "Tools & Platforms",
+      title: "Frameworks & Libraries",
       items: [
-        { name: "Git", level: 90 },
-        { name: "GitHub", level: 90 },
-        { name: "Maven", level: 85 },
-        { name: "Postman", level: 90 },
-        { name: "IntelliJ IDEA", level: 90 },
+        { name: "Spring", level: 80 },
+        { name: "Spring Boot", level: 85 },
+        { name: "Angular", level: 80 },
       ],
     },
   ],
@@ -90,29 +68,27 @@ const ROWS: SkillRow[][] = [
     {
       title: "Core Concepts",
       items: [
-        { name: "Data Structures & Algorithms", level: 74 },
-        { name: "Object-Oriented Programming", level: 92 },
-        { name: "DBMS", level: 90 },
-        { name: "Operating Systems", level: 70 },
-        { name: "Computer Networks", level: 75 },
-        { name: "JDBC", level: 88 },
-        { name: "Servlets & JSP", level: 82 },
+        { name: "Data Structures & Algorithms", level: 95 },
+        { name: "Database Management Systems", level: 90 },
+        { name: "Object-Oriented Programming (OOP)", level: 88 },
+        { name: "Computer Networks", level: 80 },
+        { name: "Operating Systems", level: 75 },
       ],
     },
     {
-      title: "Frontend",
+      title: "Soft Skills",
       items: [
-        { name: "HTML5", level: 88 },
-        { name: "CSS3", level: 67 },
-        { name: "JavaScript", level: 79 },
-        { name: "Angular", level: 45 },
-        { name: "Responsive Design", level: 90 },
-        { name: "React JS", level: 45 },
+        { name: "Teamwork", level: 90 },
+        { name: "Problem Solving", level: 95 },
+        { name: "Creativity", level: 92 },
+        { name: "Adaptability", level: 88 },
+        { name: "Communication", level: 85 },
       ],
     },
-  ]
+  ],
 ];
 
+/* 🚀 ADDED ANIMATION VARIANTS */
 const container = {
   hidden: { opacity: 0 },
   visible: { opacity: 1, transition: { staggerChildren: 0.15, duration: 0.6 } },
@@ -123,7 +99,7 @@ const fadeUp = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" } },
 };
 
-export function Skills() {
+export const Skills: React.FC = () => {
   const stageRef = useRef<HTMLDivElement>(null);
   const controls = useAnimation();
   const isInView = useInView(stageRef, { once: true });
@@ -172,15 +148,9 @@ export function Skills() {
 
   return (
     <section id="skills" className="skills-container">
-      <motion.div
-        className="skills-header"
-        variants={fadeUp}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-      >
+      <motion.div className="skills-header" variants={fadeUp} initial="hidden" animate={controls}>
         <h2 className="skills-title">
-          My <span className="gradient-text">Skills</span>
+          My <span className="grad">Skills</span>
         </h2>
         <div className="skills-underline" />
         <p className="skills-description">
@@ -209,7 +179,7 @@ export function Skills() {
         ))}
       </motion.div>
 
-      {/* PROFICIENCY TABLE */}
+      {/* TABLE PART */}
       <div className="skills-table">
         {ROWS.map((row, i) => (
           <div key={i} className="skills-row">
@@ -224,20 +194,14 @@ export function Skills() {
               >
                 <h3>{col.title}</h3>
                 <ul>
-                  {col.items.map((item) => (
-                    <li key={item.name} className="skill-item">
+                  {col.items.map((item, j) => (
+                    <li key={j} className="skill-item">
                       <div className="skill-item-header">
                         <span>{item.name}</span>
                         <span className="skill-percent">{item.level}%</span>
                       </div>
                       <div className="skill-progress">
-                        <motion.div
-                          className="skill-progress-fill"
-                          initial={{ width: 0 }}
-                          whileInView={{ width: `${item.level}%` }}
-                          viewport={{ once: true }}
-                          transition={{ duration: 0.9, ease: "easeOut" }}
-                        />
+                        <div className="skill-progress-fill" style={{ width: `${item.level}%` }} />
                       </div>
                     </li>
                   ))}
@@ -249,4 +213,4 @@ export function Skills() {
       </div>
     </section>
   );
-}
+};

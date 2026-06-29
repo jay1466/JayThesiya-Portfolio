@@ -4,6 +4,7 @@ import { Navbar } from "./components/Navbar";
 import { FloatingNav } from "./components/FloatingNav";
 import { Home } from "./components/Home";
 import { About } from "./components/About";
+import { Experience } from "./components/Experience";
 import Projects from "./components/Projects";
 import { Skills } from "./components/Skills";
 import Certificates from "./components/Certificates";
@@ -46,6 +47,7 @@ export default function App() {
       <main id="main-content">
         <Home theme={theme} />
         <About />
+        <Experience />
         <Projects />
         <Skills />
         <Resume />
