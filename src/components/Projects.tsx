@@ -16,7 +16,7 @@ const PROJECTS: Project[] = [
   {
     title: "🏦 OneStopBank - Premium Banking Portal",
     desc: "Secure and premium banking portal for seamless transactions, account management, and financial tracking.",
-    ss: "/banking-portal.png",
+    ss: "/OneStopBank.webp",
     tech: ["Java", "Spring Boot", "React", "MySQL"],
     live: "#",
     code: "https://github.com/jay1466/BankingPortal.git",
@@ -24,7 +24,7 @@ const PROJECTS: Project[] = [
   {
     title: "📄 AI Resume Analyser",
     desc: "Intelligent resume parsing and analysis tool leveraging AI to extract skills, evaluate scores, and recommend improvements.",
-    ss: "/resume-analyser.png",
+    ss: "/AiResumeAnalyzer.webp",
     tech: ["Python", "Machine Learning", "React", "Node.js"],
     live: "https://resume-analyser-ze0e.onrender.com/",
     code: "https://github.com/jay1466/Ai-Resume-Analyser.git",
@@ -32,7 +32,7 @@ const PROJECTS: Project[] = [
   {
     title: "🧾 Invoice System",
     desc: "Comprehensive invoicing solution to create, track, and manage client bills with a dynamic and user-friendly interface.",
-    ss: "/invoice-system.png",
+    ss: "/InvoiceSystem.webp",
     tech: ["React", "Node.js", "Express", "MongoDB"],
     live: "https://invoice-system-alpha-jet.vercel.app",
     code: "https://github.com/jay1466/invoice-system.git",
