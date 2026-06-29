@@ -22,6 +22,21 @@ const PROJECTS: Project[] = [
     code: "https://github.com/jay1466/BankingPortal.git",
   },
   {
+    title: "🛡️ SecureAI Sentinel - AI-Powered Repository Security Platform",
+    desc: "An AI-powered GitHub repository security platform that scans repositories for exposed secrets, API keys, hardcoded credentials, and vulnerable dependencies while providing intelligent risk analysis and remediation suggestions.",
+    ss: "/SecureAISentinel.webp",
+    tech: [
+      "Java",
+      "Spring Boot",
+      "Spring Security",
+      "PostgreSQL",
+      "Docker",
+      "Ollama"
+    ],
+    live: "#",
+    code: "https://github.com/jay1466/SecureAI-Sentinel.git",
+  },
+  {
     title: "📄 AI Resume Analyser",
     desc: "Intelligent resume parsing and analysis tool leveraging AI to extract skills, evaluate scores, and recommend improvements.",
     ss: "/AiResumeAnalyzer.webp",
