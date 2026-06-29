@@ -23,8 +23,8 @@ const PROJECTS: Project[] = [
   },
   {
     title: "🛡️ SecureAI Sentinel - AI-Powered Repository Security Platform",
-    desc: "An AI-powered GitHub repository security platform that scans repositories for exposed secrets, API keys, hardcoded credentials, and vulnerable dependencies while providing intelligent risk analysis and remediation suggestions.",
-    ss: "/SecureAISentinel.webp",
+    desc: "AI-powered GitHub security platform for detecting secrets, vulnerabilities, and providing intelligent remediation suggestions.",
+    ss: "/SecureAiSentinal.webp",
     tech: [
       "Java",
       "Spring Boot",
