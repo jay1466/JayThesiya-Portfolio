@@ -2,7 +2,7 @@
 
 A modern, responsive portfolio website showcasing projects, skills, and professional journey. Built with React, TypeScript, and Tailwind CSS, featuring smooth animations and an elegant dark-themed design.
 
-**Live Demo:** [jay-thesiya-portfolio.vercel.app](https://jay-thesiya-portfolio.vercel.app/)
+**Live Demo:** [jaythesiya.me](https://jaythesiya.me)
 
 ---
 
