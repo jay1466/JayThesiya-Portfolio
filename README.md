@@ -93,3 +93,4 @@ src/
 **Built with passion for design and development.**
 
 🚀 **Deployed on Azure**
+<!-- sync 1 -->
