@@ -17,7 +17,7 @@ const PROJECTS: Project[] = [
     title: "🏦 OneStopBank - Premium Banking Portal",
     desc: "Secure and premium banking portal for seamless transactions, account management, and financial tracking.",
     ss: "/OneStopBank.webp",
-    tech: ["Java", "Spring Boot", "React", "MySQL"],
+    tech: ["Java", "Spring Boot", "Spring Data JPA", "Spring Security", "React", "MySQL"],
     live: "#",
     code: "https://github.com/jay1466/BankingPortal.git",
   },
