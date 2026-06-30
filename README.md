@@ -94,3 +94,4 @@ src/
 
 🚀 **Deployed on Azure**
 <!-- sync 1 -->
+<!-- sync 2 -->
