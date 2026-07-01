@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { motion, useAnimation, useInView } from "framer-motion";
+import { motion, useAnimation, useInView, Variants } from "framer-motion";
 import "./Skills.css";
 
 interface SkillRow {
