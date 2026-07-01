@@ -93,24 +93,3 @@ src/
 **Built with passion for design and development.**
 
 🚀 **Deployed on Azure**
-<!-- sync 1 -->
-<!-- sync 2 -->
-<!-- sync 3 -->
-<!-- sync 4 -->
-<!-- sync 5 -->
-<!-- sync 6 -->
-<!-- sync 7 -->
-<!-- sync 8 -->
-<!-- sync 9 -->
-<!-- sync 10 -->
-<!-- sync 11 -->
-<!-- sync 12 -->
-<!-- sync 13 -->
-<!-- sync 14 -->
-<!-- sync 15 -->
-<!-- sync 16 -->
-<!-- sync 17 -->
-<!-- sync 18 -->
-<!-- sync 19 -->
-<!-- sync 20 -->
-<!-- sync 21 -->
