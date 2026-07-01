@@ -113,7 +113,7 @@ const ROWS: SkillRow[][] = [
   ]
 ];
 
-const container = {
+const container: Variants = {
   hidden: { opacity: 0 },
   visible: { opacity: 1, transition: { staggerChildren: 0.15, duration: 0.6 } },
 };
