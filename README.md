@@ -93,3 +93,5 @@ src/
 **Built with passion for design and development.**
 
 🚀 **Deployed on Azure**
+
+<!-- trigger push -->
